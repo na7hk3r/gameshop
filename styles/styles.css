@@ -95,23 +95,82 @@ h1 > span {
 /*        Section Productos       */
 
 h2 {
-  font-size: 1.5em;
+  font-size: 2em;
   font-weight: 500;
 }
 
-.destacados{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    padding: 5%;
-    width: 100%;
-    margin: 10px;
+.destacados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+  width: 100%;
 }
 
-.card-container{
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    padding: 5%;
+.card-container {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 10px;
+  padding: 1%;
+}
+
+.card {
+  width: 20rem;
+  background-color: #fff;
+  height: 70%;
+  margin: 4%;
+  padding: 20px;
+}
+
+.card > img {
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.envio{
+  font-size: 70%;
+  color: var(--green);
+}
+
+/*    Section Prod. Estrella  */
+
+.prod-estrella{
+  width:100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.productos{
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.productos>img{
+  margin: 0 5rem;
+}
+
+/*    Footer    */
+
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.f-principal{
+  background-color: var(--black);
+  width: 100%;
+  height: auto;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
 }
