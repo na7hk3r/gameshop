@@ -20,12 +20,16 @@
 nav {
   align-items: center;
   background-color: var(--black);
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
   color: #fff;
   display: flex;
   height: auto;
   justify-content: space-between;
   padding: 2%;
   width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
 }
 
 .burger::before {
@@ -52,6 +56,7 @@ ul > i {
 /*        Main        */
 
 .hero {
+  align-items: center;
   background-image: url("/img/background.png");
   background-position: center;
   background-repeat: no-repeat;
@@ -59,8 +64,8 @@ ul > i {
   display: flex;
   flex-direction: column;
   height: 30rem;
-  align-items: center;
   justify-content: center;
+  margin-top: 3rem;
 }
 
 .hero > h1 {
