@@ -15,6 +15,30 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--red);
+  scrollbar-width: thin;
+}
+
+html::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track {
+  background: linear-gradient(#a700a1, #1e0042) ;
+}
+
+
+html::-webkit-scrollbar-thumb {
+  background-color: var(--red);
+}
+
+::selection {
+  background-color: var(--red);
+  color: #FFF;
+}
+
 /*        Header      */
 
 nav {
@@ -149,6 +173,7 @@ h2 {
 .productos{
   display: flex;
   padding: 1rem;
+  padding-bottom: 5rem;
   width: 100%;
   justify-content: space-evenly;
 }
@@ -167,10 +192,10 @@ footer{
 
 .f-principal{
   background-color: var(--black);
-  width: 100%;
-  height: auto;
   color: #FFF;
   display: flex;
+  height: auto;
   justify-content: space-between;
   padding: 3%;
+  width: 100%;
 }
