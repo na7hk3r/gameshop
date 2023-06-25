@@ -19,16 +19,16 @@ html {
   scroll-behavior: smooth;
   scrollbar-color: var(--red);
   scrollbar-width: thin;
+  background-color: #C4C4C4;
 }
 
 html::-webkit-scrollbar {
-  width: 8px;
+  width: 10px;
 }
 
 html::-webkit-scrollbar-track {
-  background: linear-gradient(#a700a1, #1e0042) ;
+  background: linear-gradient(#a700a1, #1e0042);
 }
-
 
 html::-webkit-scrollbar-thumb {
   background-color: var(--red);
@@ -36,7 +36,7 @@ html::-webkit-scrollbar-thumb {
 
 ::selection {
   background-color: var(--red);
-  color: #FFF;
+  color: #fff;
 }
 
 /*        Header      */
@@ -81,15 +81,15 @@ ul > i {
 
 .hero {
   align-items: center;
-  background: url("/img/background.png"), lightgray 50%;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
+  background: url("/img/background.png"), lightgray 50%;
   display: flex;
   flex-direction: column;
-  height: 30rem;
+  height: 50vh;
   justify-content: center;
-  margin-top: 3rem;
+  margin-top: 5rem;
 }
 
 .hero > h1 {
@@ -121,12 +121,13 @@ h1 > span {
 h2 {
   font-size: 2em;
   font-weight: 500;
+  padding: 5px;
 }
 
 .destacados {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-around;
   padding: 2%;
   width: 100%;
@@ -136,17 +137,28 @@ h2 {
   align-items: center;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   margin: 10px;
   padding: 1%;
+  width: 100%;
 }
 
 .card {
-  width: 20rem;
   background-color: #fff;
+  border: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
   height: 70%;
   margin: 4%;
   padding: 20px;
+  transition: 0.3s;
+  width: 17rem;
+}
+
+.card:hover{
+  transform: scale(1.2);
 }
 
 .card > img {
@@ -154,48 +166,123 @@ h2 {
   padding: 2rem;
 }
 
-.envio{
-  font-size: 70%;
+.card>h3{
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px 0 6px 0;
+}
+
+.envio {
   color: var(--green);
+  font-size: 70%;
 }
 
 /*    Section Prod. Estrella  */
 
-.prod-estrella{
-  width:100%;
-  height: auto;
+.prod-estrella {
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: auto;
   justify-content: center;
-  align-items: center;
-}
-
-.productos{
-  display: flex;
-  padding: 1rem;
-  padding-bottom: 5rem;
   width: 100%;
-  justify-content: space-evenly;
+  padding: 10px;
 }
 
-.productos>img{
+.productos {
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 5rem;
+  padding: 1rem;
+  width: 100%;
+}
+
+.productos > img {
+  cursor: pointer;
   margin: 0 5rem;
+  transition: 0.3s;
+}
+
+.productos>img:hover{
+  transform: scale(1.1);
 }
 
 /*    Footer    */
 
-footer{
+footer {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
-.f-principal{
+.f-principal {
+  align-items: center;
   background-color: var(--black);
-  color: #FFF;
+  color: #fff;
   display: flex;
   height: auto;
   justify-content: space-between;
-  padding: 3%;
+  padding: 4%;
   width: 100%;
+}
+
+.icons {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.redes{
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+.img-redes > img {
+  cursor: pointer;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.f-secundario {
+  background-color: #C4C4C4;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 480px){
+
+  ul{
+    display: none;
+  }
+
+  .burger::before{
+    display: inline-block;
+    font-size: 2em;
+  }
+
+  .hero{
+    margin-top: 1rem;
+  }
+
+  .card-container{
+    flex-direction: column;
+  }
+
+  .productos,
+  .f-principal{
+    flex-direction: column;
+  }
+
+  .productos>img{
+    padding: 10px 0;  
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .redes{
+    padding: 20px 0;
+  }
+
 }
