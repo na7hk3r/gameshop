@@ -84,7 +84,7 @@ ul > i {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  background: url("/img/background.png"), lightgray 50%;
+  background: url("./img/background.png"), lightgray 50%;
   display: flex;
   flex-direction: column;
   height: 50vh;
